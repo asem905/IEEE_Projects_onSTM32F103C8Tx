@@ -52,8 +52,7 @@ Disables the specified peripheral by clearing the appropriate bit in the APB1 pe
 
 ## Example Usage
 
-```c
-#include "RCC_interface.h"
+ #include "RCC_interface.h"
 
 // Configure RCC to use HSI
 SYSTIM_CLOCK = RCC_HSI;
@@ -64,3 +63,83 @@ RCC_Peripheralenable(RCC_APB1ENR_TIM2EN);
 
 // Disable a specific peripheral
 RCC_Peripheraldisable(RCC_APB1ENR_TIM2EN);
+
+
+
+
+
+#GPIO Program
+Overview:
+ This repository contains a program for configuring and manipulating GPIO (General Purpose Input/Output) pins on a microcontroller. The code provides functions to initialize GPIO pins, read their states, and write values to them. It is designed to work with microcontrollers that use the STM32 GPIO peripheral.
+
+Files:
+GPIO_program.c: Contains the implementation of GPIO initialization, reading, and writing functions.
+GPIO_interface.h: (define the necessary GPIO configuration structures and constants).
+GPIO_registers.h: (define the GPIO registers).
+Functions
+void GPIO_init(GPIO_config_t* config)
+Initializes a GPIO pin according to the specified configuration.
+
+Parameters:
+
+config: A pointer to a GPIO_config_t structure that contains the configuration details:
+port: GPIO port (e.g., PORTA, PORTB, etc.).
+pin_num: The pin number to be configured (0-15).
+mode: Operating mode of the pin (input or output).
+speed: Speed of the pin if in output mode.
+pull_type: Pull-up or pull-down resistor configuration.
+Details:
+
+Configures the pin as an input or output.
+Sets pull-up or pull-down resistors if configured as input.
+Configures pin speed if configured as output.
+void GPIO_read_pin(GPIO_config_t* config)
+Reads the current logic level of a specified GPIO pin.
+
+Parameters:
+
+config: A pointer to a GPIO_config_t structure:
+port: GPIO port (e.g., PORTA, PORTB, etc.).
+pin_num: The pin number to be read.
+pin_logic: Output parameter to store the read logic level (high or low).
+Details:
+
+Reads the pin state from the input data register (IDR) and updates the pin_logic field in the config structure.
+void GPIO_write_pin(GPIO_config_t* config)
+Writes a logic level to a specified GPIO pin.
+
+Parameters:
+
+config: A pointer to a GPIO_config_t structure:
+port: GPIO port (e.g., PORTA, PORTB, etc.).
+pin_num: The pin number to be written to.
+pin_logic: Logic level to write (high or low).
+Details:
+
+Uses the BSRR (Bit Set/Reset Register) to set or reset the pin.
+The BSRR register is atomic, meaning that setting or resetting a bit does not affect other bits in the register.
+Example Usage
+c
+Copy code
+GPIO_config_t gpio_config;
+
+// Initialize GPIO pin 5 on port A as output
+gpio_config.port = PORTA;
+gpio_config.pin_num = 5;
+gpio_config.mode = GPIO_MODE_OUTPUT;
+gpio_config.speed = GPIO_SPEED_MEDIUM;
+gpio_config.pull_type = GPIO_NOPULL;
+
+GPIO_init(&gpio_config);
+
+// Set GPIO pin 5 high
+gpio_config.pin_logic = GPIOX_PIN_LOGIC_HIGH;
+GPIO_write_pin(&gpio_config);
+
+// Read GPIO pin 5 state
+GPIO_read_pin(&gpio_config);
+if (gpio_config.pin_logic == GPIOX_PIN_LOGIC_HIGH) {
+    // Pin is high
+} else {
+    // Pin is low
+}

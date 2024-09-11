@@ -1,0 +1,9 @@
+../Src/Systick_program.c:14:6:Systick_init	4	static
+../Src/Systick_program.c:25:6:Systick_delay_milliseconds	16	static
+../Src/Systick_program.c:54:6:Systick_delay_microseconds	16	static
+../Src/Systick_program.c:83:5:Systick_get_elapsed_time	4	static
+../Src/Systick_program.c:89:5:Systick_remaining_time	4	static
+../Src/Systick_program.c:95:6:Systick_enable_inrterrupt	4	static
+../Src/Systick_program.c:101:6:Systick_start_count_millisecondsIT	16	static
+../Src/Systick_program.c:123:6:Systick_start_count_microsecondsIT	16	static
+../Src/Systick_program.c:145:6:SysTick_Handler	8	static

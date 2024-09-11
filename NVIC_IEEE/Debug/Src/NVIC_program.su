@@ -1,0 +1,8 @@
+../Src/NVIC_program.c:9:6:NVIC_EnableIRQ	16	static
+../Src/NVIC_program.c:15:6:NVIC_DisableIRQ	16	static
+../Src/NVIC_program.c:21:9:NVIC_GetPendingIRQ	16	static
+../Src/NVIC_program.c:28:6:NVIC_SetPendingIRQ	16	static
+../Src/NVIC_program.c:34:6:NVIC_ClearPendingIRQ	16	static
+../Src/NVIC_program.c:41:9:NVIC_GetActive	16	static
+../Src/NVIC_program.c:46:6:NVIC_SetPriority	16	static
+../Src/NVIC_program.c:53:9:NVIC_GetPriority	16	static

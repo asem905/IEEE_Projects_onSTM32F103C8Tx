@@ -1,7 +1,7 @@
 
 
 
-# STM32 Microcontroller Programs
+# STM32F103C8T6 Microcontroller Programs
 
 This repository contains code for various peripherals and functionalities on STM32 microcontrollers. It includes programs for configuring and managing the RCC (Reset and Clock Control), GPIO (General Purpose Input/Output), SysTick timer, and NVIC (Nested Vectored Interrupt Controller) peripherals.
 

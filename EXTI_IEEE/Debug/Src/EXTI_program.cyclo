@@ -1,0 +1,12 @@
+../Src/EXTI_program.c:13:6:EXTI_VoidHardwareInterruptEnable	4
+../Src/EXTI_program.c:27:6:EXTI_VoidHardwareEventEnable	4
+../Src/EXTI_program.c:42:6:EXTI_VoidSoftwareInterruptMask	2
+../Src/EXTI_program.c:50:6:EXTI_VoidSoftwareEventMask	2
+../Src/EXTI_program.c:59:6:EXTI_VoidSetCallbackFunction	1
+../Src/EXTI_program.c:62:6:EXTI0_IRQHandler	2
+../Src/EXTI_program.c:68:6:EXTI1_IRQHandler	2
+../Src/EXTI_program.c:74:6:EXTI2_IRQHandler	2
+../Src/EXTI_program.c:80:6:EXTI3_IRQHandler	2
+../Src/EXTI_program.c:86:6:EXTI4_IRQHandler	2
+../Src/EXTI_program.c:93:6:EXTI9_5_IRQHandler	4
+../Src/EXTI_program.c:103:6:EXTI15_10_IRQHandler	4
